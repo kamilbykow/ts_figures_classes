@@ -14,7 +14,7 @@ export class Triangle implements Figure {
   private c: number;
 
   constructor(
-    public color,
+    public color: 'red' | 'green' | 'blue',
     a: number,
     b: number,
     c: number,
@@ -53,7 +53,7 @@ export class Circle implements Figure {
   private radius: number;
 
   constructor(
-    public color,
+    public color: 'red' | 'green' | 'blue',
     radius: number,
   ) {
     this.color = color;
@@ -75,15 +75,15 @@ export class Rectangle implements Figure {
 
   private width: number;
 
-  private heigth: number;
+  private height: number;
 
   constructor(
-    public color,
+    public color: 'red' | 'green' | 'blue',
     width: number,
     height: number,
   ) {
     this.color = color;
-    this.heigth = height;
+    this.height = height;
     this.width = width;
     this.shape = 'rectangle';
 
@@ -93,7 +93,7 @@ export class Rectangle implements Figure {
   }
 
   getArea = (): number => {
-    return Math.floor(this.width * this.heigth * 100) / 100;
+    return Math.floor(this.width * this.height * 100) / 100;
   };
 }
 
